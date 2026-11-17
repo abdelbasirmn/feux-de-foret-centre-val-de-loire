@@ -1,4 +1,4 @@
----
+cd---
 updated: 2026-11-13T12:32:19.918+01:00
 edited_seconds: 6
 ---
@@ -15,7 +15,7 @@ Quatre questions dont la réponse aiderait la direction à trancher.
 1. Quelles sont les caracteristiques géographiques des zones les plus touchées en 2026?
 
 2. Les limites de ressources sont elles plus humaines ou budgetaire?
-3. Sur quoi se base la prédiction du seuil et dans quelles circonstances ce dernier s'est il carrément trompé?
+3. Sur quoi se base la prédiction du danger et dans quelles circonstances cette dernière est parfois fausse?
 4. Les départements de la région dans quelles mesures s'entraident t-ils ?
 
 
