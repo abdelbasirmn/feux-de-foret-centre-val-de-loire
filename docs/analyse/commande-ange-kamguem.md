@@ -53,3 +53,34 @@ Pour chaque question, la donnée qu'il vous faudrait idéalement pour répondre.
 |2|le nombre d'incendie par zone, le nombre de kilometres a couvrir par zone, les moyens disponibles, la position des casernes et les temps d'intervention. |Une ligne par zone pour les moyens disponibles.|les données des années précédentes et de l'année en cours |les données récentes pour les moyens disponibles|Les différentes zones du Loiret.|
 |3|Les dates des différents départs de feu, les périodes où ils sont les plus fréquents et les niveaux de danger annoncés.|Une ligne par incendie, avec sa date et sa localisation.|Plusieurs années pour voir si certaines périodes reviennent souvent.|Les dernières données disponibles|les zones de Loiret|
 |4|Les causes des départs de feu, les conditions météorologiques et les endroits où ils se sont déclarés.|une ligne par incendie et leurs causes|les données des années précédentes |Les données des années précédentes|les zones de Loiret|
+
+## 5. Confrontation aux sources
+
+Première version réalisée à partir des deux sources que j'ai explorées individuellement. La matrice sera complétée avec les autres sources du groupe.
+
+### Matrice
+
+| Question | BDIFF | Copernicus CEMS |
+|---|---|---|
+| 1 | partiel : on dispose des dates d'alerte et des communes où les incendies ont eu lieu, mais pas des niveaux de danger annoncés ni du seuil de déclenchement. (Rubriques grain et clés disponibles) | partiel : on dispose des indices de danger d'incendie par date et par zone géographique, mais pas du seuil actuellement utilisé pour renforcer le dispositif. (Rubrique grain et indice FWI) |
+| 2 | partiel : le code INSEE de la commune permet de voir quelles zones sont les plus touchées par les incendies, mais on ne connaît pas les moyens disponibles dans ces zones. (Rubrique clés disponibles) | partiel : les indices de danger permettent de repérer les zones à risque, mais on n'a pas d'informations sur les pompiers, les véhicules ou les casernes. (Rubrique principaux indicateurs) |
+| 3 | partiel : les dates d'alerte permettent de voir à quelles périodes de l'année il y a le plus de départs de feu, mais on ne connaît pas les niveaux de danger annoncés ces jours-là. (Rubrique clés disponibles) | partiel : les indices journaliers permettent de voir les périodes où le danger est élevé, mais la source ne recense pas les incendies qui ont réellement eu lieu. (Rubriques grain et limites) |
+| 4 | partiel : la source renseigne certaines causes des départs de feu et leur localisation, mais les causes ne sont pas toujours renseignées et on n'a pas les conditions météorologiques. (Rubriques questions et limites) | partiel : les indices de sécheresse, d'humidité et de propagation permettent d'étudier les conditions favorables aux incendies, mais pas de connaître la cause réelle de chaque départ de feu. (Rubrique principaux indicateurs) |
+
+### Écarts avec la section 4
+
+| Question | Meilleure source | Grain | Période | Fraîcheur | Emprise |
+|---|---|---|---|---|---|
+| 1 | Copernicus CEMS | Une ligne par zone et par jour → une observation par date et par maille géographique après transformation | Jusqu'en 2026 → janvier 1940 à octobre 2026 selon la documentation | Données récentes → dernière date couverte le 24/10/2026 | Loiret et autres départements → couverture mondiale, avec possibilité de filtrer |
+| 2 | BDIFF | Une ligne par zone pour les moyens disponibles → une ligne par incendie | Années précédentes et année en cours → 2006 à 2025 | Moyens actuellement disponibles → aucune donnée sur les moyens | Zones du Loiret → communes du Loiret disponibles dans la couverture nationale |
+| 3 | BDIFF | = | = | Dernières données disponibles → données jusqu'en 2025 | Zones du Loiret → communes du Loiret |
+| 4 | BDIFF | Une ligne par incendie avec sa cause → une ligne par incendie avec des causes parfois non renseignées | = | = | Zones du Loiret → communes du Loiret |
+
+### Décisions
+
+| Question | Ce qui manque | Décision | Pourquoi | Ce que la décision coûte |
+|---|---|---|---|---|
+| 1 | Le seuil actuel de déclenchement et l'historique des niveaux de danger annoncés | collecter | Il faudrait connaître le seuil utilisé actuellement pour pouvoir vérifier s'il est adapté aux incendies observés. | Demander ces informations au service concerné et les rapprocher des données historiques. |
+| 2 | La localisation des casernes, les moyens humains et matériels disponibles et les temps d'intervention | collecter | Connaître les zones les plus touchées ne suffit pas pour savoir si les moyens disponibles sont suffisants. | Trouver des données supplémentaires auprès du SDIS et les rapprocher des zones à risque. |
+| 3 | Les niveaux de danger annoncés au moment des incendies | approximer | On pourrait déjà utiliser les dates des incendies et les indices de danger de Copernicus pour identifier les périodes les plus critiques. | Faire un rapprochement géographique et temporel entre les deux sources. Les indices ne correspondent pas forcément aux niveaux de danger réellement annoncés. |
+| 4 | Les causes non renseignées et les conditions météorologiques au moment des départs de feu | approximer | On pourrait analyser les causes connues et les rapprocher des indices météorologiques pour voir dans quelles conditions les incendies sont plus fréquents. | Préparer et croiser les deux sources. Les résultats ne représenteront pas forcément l'ensemble des incendies et ne permettront pas de prouver un lien de causalité. |
