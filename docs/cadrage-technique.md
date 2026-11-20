@@ -13,9 +13,9 @@ Le projet étudie les feux de forêt en Centre-Val de Loire, avec un focus sur l
 - Carroyage DFCI et OCS GE
 - ADMIN EXPRESS et BD Forêt V2
 
-## Stack proposée
+## Stack retenue
 
-| Usage | Choix proposé |
+| Usage | Choix retenu |
 |---|---|
 | Exploration | Python, VS Code et Jupyter Notebook |
 | Pipeline de données | Databricks Free Edition, Python, PySpark et SQL |
