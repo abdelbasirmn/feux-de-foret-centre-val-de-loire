@@ -1,0 +1,15 @@
+# Données brutes
+data/raw/
+
+# Fichiers temporaires Python
+__pycache__/
+*.pyc
+
+# Fichiers temporaires Jupyter
+.ipynb_checkpoints/
+
+# Fichiers d'index GRIB
+*.idx
+
+# Variables d'environnement et secrets
+.env
