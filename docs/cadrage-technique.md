@@ -13,8 +13,6 @@ Le projet étudie les feux de forêt en Centre-Val de Loire, avec un focus sur l
 - Carroyage DFCI et OCS GE
 - ADMIN EXPRESS et BD Forêt V2
 
-Les données sur les moyens du SDIS du Loiret restent à compléter. [Matrice questions × sources (#13)](https://github.com/abdelbasirmn/feux-de-foret-centre-val-de-loire/issues/13) · [Recherche de sources complémentaires (#14)](https://github.com/abdelbasirmn/feux-de-foret-centre-val-de-loire/issues/14)
-
 ## Stack proposée
 
 | Usage | Choix proposé |
