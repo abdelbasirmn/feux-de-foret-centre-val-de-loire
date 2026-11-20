@@ -1,25 +1,34 @@
 # Inventaire des sources
 
-| Source | Explorée par | Pertinente pour nos questions ? | Ce que nous avons découvert |
-| :--- | :--- | :--- | :--- |
-|Météo-France (Météo des forets)|Thanael |Oui|Granularité non conforme (un indicateur aggrégé pour tout le département). Cependant permettrait facilement des comparaisonS entre departements, regions et territoirE. Mais aussi le niveau d'efficacité de la nouvelle métrique calculée.|
-|Météo-France (données climatologiques)|Thanael |Oui |Les données climatoligiques fournissent toutes les variables physiques nécessaires pour recalculer l'Indice Forêt Météo (IFM) par zone géographique spécifique à l'intérieur du département du Loiret. Pour les données manquantes sur les facteurs clés dans le calcul de l'indice, nous devrons opérer par proxy.|
-|Carroyage-dfci-2km|Karine  |Oui |les pompiers  communiquent par code carré DFCI. Facilite la conversion des résultats directement par maille DFCI dans leur logiciel opérationnel|
-|OCS GE (Loiret, 2023)|Karine |Oui |Cette carte vectorielle distingue les forêts, des champs et des maisons. Elle permettrait de repérer les zones les plus critiques par exemple là où les maisons touchent la forêt ( risque de perte de vie humaine en cas d'incendie) et d'éliminer les zones sans forêt pour éviter d'envoyer des pompiers inutilement.|
-|Copernicus CEMS|Ange |Oui|Les sous-indices ERA5 de sécheresse des sols (DC) et de combustible disponible (BUI) pour mesurer l'assèchement cumulé des massifs permettent d'aller au delà de l'IFM calculé et permettrait d'anticiper l'embrasement des feux. Cependant, l'indice global FWI est en revanche écarté  car grille de 9 à 25 km trop large et seuils européens inadaptés au Loiret comparé à notre IFM local calculé sur les stations Météo-France du département.|
-|BDIFF|Ange |Oui | Fournit l'historique officiel des incendies réels dans le Loiret : dates exactes d'alerte, communes (codes INSEE) et surfaces brûlées, essentiels pour recalibrer nos seuils d'IFM sur des départs de feu avérés. En revanche, les causes détaillées et les moyens engagés sont souvent manquants, donc peuvent être une source de biais|
-|BD Forêt® V2|Abdelbasir | Oui|Renseigne sur les formations végétales et la distinction précise entre les differents peuplements des végétations (très inflammables vs moins sensibles). Dans ce cas, les modalités à très faible combustibilité (comme les peupleraies ou les boisements humides de vallée) ne sont pas pertinets pour l'analyse. |
-|ADMIN EXPRESS|Abdelbasir |Oui|Elle fournit les contours géométriques officiels des communes et du département du Loiret ainsi que les codes INSEE, indispensables pour lier les feux de la BDIFF (ne contenant pas de coordonnées GPS précises) au reste de la base via le DFCI d'. |
-
----
+| Source | Explorée par | Pertinente pour nos questions ? | Ce que nous avons découvert | 
+| :--- | :--- | :--- | :--- | 
+| **Météo-France** (Météo des forêts) | Thanael | Oui | Granularité non conforme à l'échelle intra-départementale (un indicateur agrégé pour tout le département). Cependant, permet facilement des comparaisons entre départements, régions et territoire national, ainsi que l'évaluation de l'efficacité de la nouvelle métrique calculée. | 
+| **Météo-France** (données climatologiques quotidiennes | Thanael | Oui | Les données climatologiques fournissent toutes les variables physiques nécessaires pour recalculer l'Indice Forêt Météo (IFM) par zone géographique spécifique à l'intérieur du département du Loiret. Pour les données manquantes sur les facteurs clés dans le calcul de l'indice, nous devrons opérer par proxy. | 
+| **Carroyage DFCI 2 km** | Karine | Oui | Les pompiers communiquent par code carré DFCI. Cette source facilitera une exposition par maille DFCI (2 km × 2 km) des résultats, pour une meilleur compréhenson des enjeux.| 
+| **OCS GE (Loiret, 2023)** | Karine | Oui | Cette carte vectorielle distingue les forêts, les champs et les zones bâties. Elle permet de repérer les interfaces habitat-forêt les plus critiques (là où les habitations touchent la forêt, avec un risque humain en cas d'incendie) et d'écarter les zones sans végétation inflammable. | 
+| **Copernicus CEMS / CDS (ERA5)** | Ange | Oui | Les sous-indices ERA5 de sécheresse des sols (DC) et de combustible disponible (BUI) mesurent l'assèchement cumulé des massifs, permettant d'aller au-delà de l'IFM journalier et d'anticiper l'embrasement des feux. En revanche, l'indice global FWI est écarté car sa grille (9 à 25 km) est trop large et ses seuils européens sont inadaptés au Loiret comparé à notre IFM local. | 
+| **Copernicus Sentinel-2 (NDVI / NDWI)** | Équipe | oui mais non retenue | Imagerie satellite permettant de calculer le stress hydrique réel de la végétation (NDVI, NDWI) tous les 5 jours à 10–20 m de résolution. Écartée faute de temps en raison de la volumétrie très élevée et des pré-traitements lourds.Copernicus ERA5 (DC/BUI) et la BD Forêt V2 peuvent servir de Proxy|
+| **BDIFF** | Ange | Oui | Fournit l'historique officiel des incendies réels dans le Loiret : dates exactes d'alerte, communes (codes INSEE) et surfaces brûlées, essentiels pour recalibrer nos seuils d'IFM sur des départs de feu avérés. En revanche, les causes détaillées et les moyens engagés comportent beaucoup de données manquantes/ non exhaustives, ce qui constitue une limite  et pourrait être source de biais. | 
+| **BD Forêt® V2** | Abdelbasir | Oui | Renseigne sur les formations végétales et permet la distinction précise entre les différents peuplements (très inflammables comme les résineux/landes vs moins sensibles). Les modalités à très faible combustibilité (peupleraies, boisements humides de vallée) peuvent être écartées ou pondérées à la baisse dans l'analyse. | 
+| **ADMIN EXPRESS** | Abdelbasir | Oui | Fournit les contours géométriques officiels des communes et du département du Loiret ainsi que les codes INSEE, indispensables pour lier les feux de la BDIFF (qui ne contiennent pas de coordonnées GPS précises) au reste de la base spatiale via le carroyage DFCI. | 
+| **BD TOPO® IGN** | Thanael | Oui | Permet de localiser officiellement les Centres d'Incendie et de Secours (CIS) du Loiret et d'exploiter le graphe routier et des pistes forestières pour calculer la distance ou le temps d'accès théorique entre la caserne la plus proche et chaque carré DFCI critique. | 
+| **BD ALTI® IGN** |Thanael  | A tester : Variable de contrôle potentielle| Permet de calculer la pente et l'exposition des versants par carré DFCI. Elle permet de vérifier empiriquement si les micro-reliefs locaux (coteaux de Loire, vallées) influencent les départs et/ou la propagation des feux. | 
 
 ## Bilan de l'exploration
 
 ### Quelles questions de vos analyses n'ont encore aucune source ?
-*Votre réponse ici...*
+- **Sur notre liste de départ (Q01 à Q10) :** Les questions qui touchent à l'organisation interne des pompiers (Q03, Q09 et la partie organisationnelle de Q10) n'ont pas de source ouverte. Nous n'avons pas accès aux effectifs disponibles au quotidien, au détail des camions par caserne, aux budgets ni aux accords de renfort entre départements (seule l'adresse des casernes est disponible via la BD TOPO).
+
+- **Sur notre liste recentrée :** Toutes les questions retenues sont couvertes par au moins une source de notre inventaire. Il nous manque seulement les données liées aux comportements humains (fréquentation des forêts par les promeneurs, imprudences), qui sont rarement renseignées dans la base des incendies.
 
 ### Quelle source vous a surpris, et pourquoi ?
-*Votre réponse ici...*
+- **La BDIFF (base nationale des incendies) :** On s'attendait à y trouver le point GPS exact de chaque départ de feu, mais l'information s'arrête à l'échelle de la commune (via le code INSEE). De plus, les causes des feux et les moyens envoyés sur place sont très souvent absents. Pour savoir quelles forêts ont réellement brûlé, nous devons donc croiser ces données avec les contours des communes (ADMIN EXPRESS), le quadrillage des pompiers (carroyage DFCI) et la carte des forêts (BD Forêt).
+
+
+- **La Météo des forêts (Météo-France) :** Elle donne un seul niveau d'alerte par jour pour l'ensemble du Loiret. Ce chiffre unique ne fait pas la différence entre des zones très inflammables comme les pins de Sologne ou la forêt d'Orléans et les plaines agricoles de la Beauce, ce qui explique en partie les fausses alertes.
 
 ### Quelle source semble utile mais inexploitable dans le temps du projet ?
-*Votre réponse ici...*
+- **Les images satellites Copernicus Sentinel-2 :** Elles permettent de suivre très finement le dessèchement de la végétation tous les 5 jours (jusqu'à 10 mètres de précision). En revanche, elles sont trop lourdes ( plusieurs centaines de mégaoctets) et longues à préparer pour la durée du projet.  Les données déjà prêtes de Copernicus ERA5 (indices de sécheresse des sols et de la végétation) nous donnent une information suffisante sans ce travail de traitement. 
+
+
+- **Le calcul des temps de trajet en forêt (via la BD TOPO) :** modéliser précisément les temps de parcours réels des camions feux de forêt sur l'ensemble des petits chemins forestiers du département demanderait trop de travail technique par rapport au calendrier du projet. Mais placer les casernes sur une carte et mesurer la distance par la route principale ou à vol d'oiseau est possible.
