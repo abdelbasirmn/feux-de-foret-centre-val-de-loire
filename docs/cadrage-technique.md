@@ -20,7 +20,7 @@ Les données sur les moyens du SDIS du Loiret restent à compléter. [Matrice qu
 | Usage | Choix proposé |
 |---|---|
 | Exploration | Python, VS Code et Jupyter Notebook |
-| Pipeline de données | Databricks, Python, PySpark et SQL |
+| Pipeline de données | Databricks Free Edition, Python, PySpark et SQL |
 | Stockage | Delta Lake |
 | Architecture des données | Bronze / Silver / Gold |
 | Modélisation décisionnelle | Modèle en étoile |
