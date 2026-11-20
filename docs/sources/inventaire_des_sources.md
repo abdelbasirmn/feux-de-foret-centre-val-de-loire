@@ -2,7 +2,7 @@
 
 | Source | Explorée par | Pertinente pour nos questions ? | Ce que nous avons découvert |
 | :--- | :--- | :--- | :--- |
-|Météo-France (Météo des forets)|Thanael |Oui|Granularité non conforme (un indicateur aggrégé pour tout le département). Cependant permettrait facilement des comparaison en tre departements e, regions et territoir. Mais aussi le niveau d'efficacité de la nouvelle métrique calculée.|
+|Météo-France (Météo des forets)|Thanael |Oui|Granularité non conforme (un indicateur aggrégé pour tout le département). Cependant permettrait facilement des comparaisonS entre departements, regions et territoirE. Mais aussi le niveau d'efficacité de la nouvelle métrique calculée.|
 |Météo-France (données climatologiques)|Thanael |Oui |Les données climatoligiques fournissent toutes les variables physiques nécessaires pour recalculer l'Indice Forêt Météo (IFM) par zone géographique spécifique à l'intérieur du département du Loiret. Pour les données manquantes sur les facteurs clés dans le calcul de l'indice, nous devrons opérer par proxy.|
 |Carroyage-dfci-2km|Karine  |Oui |les pompiers  communiquent par code carré DFCI. Facilite la conversion des résultats directement par maille DFCI dans leur logiciel opérationnel|
 |OCS GE (Loiret, 2023)|Karine |Oui |Cette carte vectorielle distingue les forêts, des champs et des maisons. Elle permettrait de repérer les zones les plus critiques par exemple là où les maisons touchent la forêt ( risque de perte de vie humaine en cas d'incendie) et d'éliminer les zones sans forêt pour éviter d'envoyer des pompiers inutilement.|
