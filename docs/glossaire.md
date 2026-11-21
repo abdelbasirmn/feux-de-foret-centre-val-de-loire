@@ -22,7 +22,7 @@
 
 ---
 
-## Météo des forëts
+## Météo des forêts
 
 - **Définition**:
 
