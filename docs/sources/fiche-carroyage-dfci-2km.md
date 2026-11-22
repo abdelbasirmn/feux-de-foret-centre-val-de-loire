@@ -1,0 +1,17 @@
+# Fiche d’identité de la source — Carroyage DFCI (2 km)
+
+| Rubrique | Valeur |
+|---|---|
+| Propriétaire et système | Carroyage DFCI France (2 km). Le catalogue affiche « Compte supprimé ». Identité du producteur d’origine **non vérifiée** : aucune institution productrice n’est identifiable sur la fiche consultée ou dans l’archive. |
+| Mode d’accès (export, API, téléchargement) et format | Téléchargement depuis la [fiche du catalogue data.gouv.fr](https://www.data.gouv.fr/datasets/carroyage-dfci-2-km). Archive `CARRO_DFCI_2x2_L93.7z` contenant un Shapefile avec ses fichiers `.dbf`, `.shx` et `.prj`. Fichiers de données consultés pour cette correction : `CARRO_DFCI_2X2_L93.shp` et `CARRO_DFCI_2X2_L93.dbf`. Coordonnées en RGF93 / Lambert-93 (EPSG:2154). |
+| Grain (une ligne = ?) | Une ligne représente un carreau du carroyage DFCI de maille nominale 2 km × 2 km, associé à un polygone et identifié par un code de six caractères dans `NOM`. Le catalogue précise que la grille d’origine en Lambert II étendu a été reprojetée en Lambert-93, avec de légères déformations. |
+| Emprise géographique | France métropolitaine, selon la description du catalogue. Le Loiret est couvert. Une sélection réalisée avec le contour départemental de `carte_loiret.html` contient 1 866 carreaux, y compris ceux chevauchant la limite du département. L’archive fournie contient le carroyage national. |
+| Période réellement couverte par les données | Date de référence **non vérifiée** : la couverture temporelle n’est pas renseignée dans le catalogue et aucune date de référence n’est fournie dans les attributs ou dans `info.txt`. La date de mise à jour du catalogue ne précise pas la date de référence géographique. |
+| Date de dernière mise à jour affichée sur la fiche | **7 juin 2016**, affichée sur la fiche d’origine data.gouv.fr et sur sa ressource téléchargeable. |
+| Fréquence de mise à jour | **Annuelle**, selon la fréquence déclarée dans les métadonnées du catalogue. Le portail signale que cette fréquence n’est pas respectée. |
+| Volumétrie | Archive complète : 339 264 lignes et autant de polygones, avec un champ descriptif `NOM`. Archive compressée : 7 679 911 octets, soit environ 7,68 Mo. Sélection de travail couvrant le Loiret : 1 866 carreaux. |
+| Clés disponibles (sur quoi pourra-t-on joindre ?) | `NOM` : 339 264 codes distincts, sans valeur manquante dans l’archive. Une jointure par code est envisageable avec une source utilisant le même carroyage. Compatibilité avec les codes d’une source de feux **non vérifiée** : aucun fichier de feux n’a été comparé. Les polygones permettent également d’envisager un croisement géographique. |
+| Données personnelles | Aucune donnée personnelle repérée dans les données examinées : le seul champ descriptif, `NOM`, contient les codes des carreaux DFCI, associés à des polygones. |
+| Licence | **Licence Ouverte / Open Licence**, indiquée sur la fiche du catalogue. Version **non vérifiée** : aucun numéro de version n’est précisé dans l’intitulé de la licence affichée pour ce jeu de données. |
+| Questions de votre analyse auxquelles elle pourrait répondre | « Dans quelles zones du Loiret faut-il concentrer les moyens en priorité ? » et « Quelles caractéristiques géographiques des zones touchées permettent d’identifier d’autres zones du Loiret à surveiller en priorité ? » Cette source fournit une grille de localisation et de regroupement à croiser avec les données de feux, de végétation et de moyens disponibles. |
+
