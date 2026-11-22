@@ -1,7 +1,9 @@
 # K1 - Diagnostic stratégique
 
+**Ticket associé :** #8
+
 **Auteur :** Thanael BARTHELEMY
-**Date :** 22/11/2026
+**Date :** 18/11/2026
 **Question analytique :** Q02 — Quelles caractéristiques du territoire favorisent les incendies ?
 
 ## 1. Diagnostic
