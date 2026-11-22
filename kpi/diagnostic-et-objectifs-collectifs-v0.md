@@ -10,7 +10,7 @@
 |---|---|---|
 | **Stratégie** | Préparer le SDIS du Loiret à la saison des feux de forêt de l’été 2027. | **Établi.** La direction indique qu’elle prépare l’été 2027 et s’attend à autant de feux qu’en 2026, voire davantage. |
 | **Enjeu** | Concentrer les moyens humains et financiers là où ils sont le plus utiles. | **Établi.** La commande indique que le budget ne permet pas de renforcer le dispositif dans tout le département pendant tout l’été. |
-| **Objectif** | Éclairer deux décisions : les zones où concentrer les moyens et le niveau de danger à partir duquel envisager un dispositif renforcé. | **Établi.** Ces deux arbitrages sont demandés par le SDIS. Les zones, les périodes et le seuil à recommander restent à déterminer. |
+| **Objectif** | Éclairer trois décisions : où concentrer les moyens, à quelles périodes les renforcer et à partir de quel niveau de danger envisager un dispositif renforcé. | **Établi.** La commande du SDIS motive les décisions sur les zones et le seuil. Les périodes de renfort sont couvertes par la question collective Q07. Les zones, les périodes et le seuil à recommander restent à déterminer. |
 | **Action** | Décrire les feux observés par commune et période, puis comparer plusieurs scénarios de seuil sur les jours couverts par BDIFF et la Météo des forêts. | **Supposé.** Cette méthode est proposée par l’équipe projet. Sa faisabilité dépend de la qualité des données et de la couverture commune. |
 
 Commande du SDIS 45 — Saison feux 2027 · [Analyse d’Abdelbasir](https://github.com/abdelbasirmn/feux-de-foret-centre-val-de-loire/blob/main/docs/analyse/commande-Abdelbasir-MEFIRE_NSANGOU.md) · [Matrice du #13](https://github.com/abdelbasirmn/feux-de-foret-centre-val-de-loire/blob/main/docs/sources/matrice.md)
