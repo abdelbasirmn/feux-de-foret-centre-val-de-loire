@@ -1,5 +1,7 @@
 # K2 - Définition d'un objectif SMART
 
+**Ticket associé :** #9
+
 **Auteur :** Thanael BARTHELEMY
 **Date :** 18/11/2026
 **Question analytique :** Q02 — Quelles caractéristiques du territoire favorisent les incendies ?
