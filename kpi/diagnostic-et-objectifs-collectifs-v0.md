@@ -33,6 +33,18 @@ Commande du SDIS 45 — Saison feux 2027 · [Analyse d’Abdelbasir](https://git
 | **Zones — Q01 et Q02. Où concentrer les moyens ?** | Rapprocher les feux des communes et des caractéristiques territoriales disponibles. | Mieux cibler les zones à surveiller. | **Pour la présentation du 11 décembre**, produire une carte communale du Loiret des feux observés qui indique la période couverte, les critères de classement et les données territoriales utilisées. Signaler les communes insuffisamment documentées. |
 | **Seuil — Q04, Q06 et Q08. Quel niveau de danger tester ?** | Rapprocher les feux et les prévisions, puis simuler plusieurs seuils. | Améliorer la règle de déclenchement des renforts. | **Pour le contrôle du 6 décembre**, produire un tableau comparant les seuils de la nomenclature météo vérifiée. Pour chaque seuil, indiquer les jours de renfort simulés et les jours avec feu sous le seuil. Utiliser une échéance unique et une période commune vérifiées, puis déclarer le nombre de feux non appariés. Étendre la comparaison régionale si la couverture le permet. |
 
+### H3 — Règles de calcul proposées pour la simulation des seuils
+
+Rapprocher la date de première alerte BDIFF de la date de validité de la prévision pour le Loiret. Utiliser une seule échéance sur une période commune vérifiée. J1 sur 2025 reste à confirmer.
+
+Pour chaque seuil, afficher trois mesures.
+
+- **Jours de renfort simulés** — nombre de jours couverts où le niveau prévu atteint ou dépasse le seuil, sur le total des jours couverts.
+- **Jours avec feu sous le seuil** — nombre de jours couverts avec au moins un départ enregistré et un niveau prévu inférieur au seuil, sur le total des jours couverts avec au moins un départ enregistré.
+- **Part des départs couverts par le seuil** — nombre de départs appariés à une prévision qui atteint ou dépasse le seuil, divisé par le nombre total de départs appariés.
+
+Compter zéro départ uniquement pour un jour dont la couverture par les deux sources est documentée et pour lequel BDIFF ne recense aucun départ. Présenter séparément les jours hors couverture ou de couverture inconnue et les départs sans prévision associée.
+
 **Références et tests de cohérence**
 
 - **Périodes.** Référence historique **à mesurer**. Couvrir toute la saison pourrait maximiser la part des feux couverts, mais le nombre de jours à mobiliser doit aussi figurer dans le résultat.
